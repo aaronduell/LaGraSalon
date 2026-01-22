@@ -154,11 +154,46 @@ header.site-header {
 .hero {
   padding: 72px 0 54px 0;
 }
+.hero-orbs,
+.page-hero-orbs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.orb {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,208,175,0.85), rgba(245,174,158,0.35), rgba(255,255,255,0));
+  filter: blur(2px);
+  opacity: 0.8;
+  animation: floatUp 12s ease-in-out infinite;
+}
+.orb-one {
+  top: -120px;
+  left: -80px;
+}
+.orb-two {
+  right: -120px;
+  bottom: -140px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle at 40% 40%, rgba(159,209,178,0.85), rgba(245,174,158,0.30), rgba(255,255,255,0));
+  animation-delay: -4s;
+}
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 32px;
   align-items: center;
+}
+.hero .container,
+.page-hero .container {
+  position: relative;
+  z-index: 1;
 }
 .hero-card {
   background: rgba(255, 255, 255, 0.85);
